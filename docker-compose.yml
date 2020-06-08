@@ -1,0 +1,40 @@
+version: '3.2'
+
+
+
+networks:
+    gitlab:
+        driver: bridge
+
+
+
+volumes:
+    gitlab-etc:
+        driver: local
+    gitlab-opt:
+        driver: local
+    gitlab-log:
+        driver: local
+
+
+
+services:
+
+
+
+    gitlab:
+        # https://hub.docker.com/r/gitlab/gitlab-ce/tags
+        image: gitlab/gitlab-ce:13.0.5-ce.0
+        hostname: gitlab
+        #restart: always
+        volumes:
+            - gitlab-etc:/etc/gitlab
+            - gitlab-opt:/var/opt/gitlab
+            - gitlab-log:/var/log/gitlab
+        ports:
+            - 22:22
+            - 443:443
+            - 11121:80
+        networks:
+            - gitlab
+

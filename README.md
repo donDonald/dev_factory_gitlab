@@ -33,7 +33,7 @@ $ docker-compose up -d --build
 
 ### Append gitlab to /etc/hosts
 ```
-$ echo "$(docker exec -it gitlab_gitlab_1 bash -c "hostname -i" | head -c-2) $(docker exec -it gitlab_gitlab_1 bash -c "hostname" | head -c-2)" >> /etc/hosts
+$ echo "$(docker exec -it gitlab_gitlab_1 sh -c "hostname -i" | head -c-2) $(docker exec -it gitlab_gitlab_1 sh -c "hostname" | head -c-2)" >> /etc/hosts
 ```
 
 
@@ -53,7 +53,6 @@ $ docker volume rm gitlab_gitlab-etc gitlab_gitlab-log gitlab_gitlab-opt
 
 
 ### Web services
-- [gitlab](http://gitlab)
 - [localhost](http://localhost:11121)
 
 

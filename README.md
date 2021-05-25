@@ -11,9 +11,9 @@
 It's a docker-compose file containing next services:
 ```
 $ docker-compose ps
-           Name                   Command               State                                              Ports                                    
-----------------------------------------------------------------------------------------------------------------------------------------------------
-dev-factory-gitlab_gitlab_1   /assets/wrapper   Up (health: starting)   0.0.0.0:32768->1342/tcp, 22/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:11121->80/tcp
+ Name        Command               State                                              Ports                                    
+-------------------------------------------------------------------------------------------------------------------------------
+gitlab   /assets/wrapper   Up (health: starting)   0.0.0.0:49153->1342/tcp, 22/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:11121->80/tcp
 ```
 
 
@@ -35,9 +35,16 @@ Once this script is run it will append/remove entiries into /etc/hosts
 
 
 
+#### Updating /etc/hosts(Option B)
+```
+$ echo "$(docker exec -it gitlab sh -c "hostname -i" | head -c-2) $(docker exec -it gitlab sh -c "hostname" | head -c-2)" | sudo tee -a /etc/hosts
+```
+
+
+
 ### To launch
 ```
-$ docker-compose up -d --build
+$ docker-compose up
 ```
 Ensure /etc/hosts contains records for all containers
 
@@ -58,7 +65,7 @@ $ docker volume rm dev-factory-gitlab_gitlab-etc dev-factory-gitlab_gitlab-log d
 
 
 ### Web services
-- [localhost](http://localhost:11121)
+- [localhost:11121](http://localhost:11121)
 
 
 

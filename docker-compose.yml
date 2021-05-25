@@ -26,7 +26,8 @@ services:
         # https://hub.docker.com/r/gitlab/gitlab-ce/tags
         image: gitlab/gitlab-ce:13.0.5-ce.0
         hostname: gitlab
-        #restart: always
+        container_name: gitlab
+        restart: unless-stopped
         volumes:
             - gitlab-etc:/etc/gitlab
             - gitlab-opt:/var/opt/gitlab

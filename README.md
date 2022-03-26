@@ -59,7 +59,7 @@ $ docker-compose down
 
 ### To cleanup volumes
 ```
-$ docker volume rm dev-factory-gitlab_gitlab-etc dev-factory-gitlab_gitlab-log dev-factory-gitlab_gitlab-opt
+$ docker volume rm dev_factory_gitlab_gitlab-etc dev_factory_gitlab_gitlab-log dev_factory_gitlab_gitlab-opt
 ```
 
 

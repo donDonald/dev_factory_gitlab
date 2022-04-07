@@ -1,10 +1,21 @@
-# gitlab - Web UI for git
+<div align="center">
+    <img src="images/license-MIT-blue.svg">
+</div>
+
+# Intro 
+gitlab itself, i.e git and web UI
+
+---
 
 
+# Use-cases
+- As a developer I need quckly to setup git and frontend. No SSL yet.
 
-### Use-cases
-- I'm a developer and need quckly to setup git and frontend. No SSL yet.
+<div align="center">
+    <img src="images/use_cases.png">
+</div>
 
+---
 
 
 ### Details
@@ -16,12 +27,14 @@ $ docker-compose ps
 gitlab   /assets/wrapper   Up (health: starting)   0.0.0.0:49153->1342/tcp, 22/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:11121->80/tcp
 ```
 
+---
 
 
 ### Cridentials
 Here are no predefined cridentials as such.\
 Once you navigate to gitlab page simly register you user and that user has all priveleges, you can add ssh keys and so on.
 
+---
 
 
 ### Updating /etc/hosts
@@ -40,6 +53,7 @@ Once this script is run it will append/remove entiries into /etc/hosts
 $ echo "$(docker exec -it gitlab sh -c "hostname -i" | head -c-2) $(docker exec -it gitlab sh -c "hostname" | head -c-2)" | sudo tee -a /etc/hosts
 ```
 
+---
 
 
 ### To launch
@@ -48,6 +62,7 @@ $ docker-compose up
 ```
 Ensure /etc/hosts contains records for all containers
 
+---
 
 
 ### To shutdown
@@ -55,6 +70,7 @@ Ensure /etc/hosts contains records for all containers
 $ docker-compose down
 ```
 
+---
 
 
 ### To cleanup volumes
@@ -62,50 +78,55 @@ $ docker-compose down
 $ docker volume rm dev_factory_gitlab_gitlab-etc dev_factory_gitlab_gitlab-log dev_factory_gitlab_gitlab-opt
 ```
 
+---
 
 
 ### Web services
 - [localhost:11121](http://localhost:11121)
 
+---
 
 
 ### Links
 - [Configuration](https://docs.gitlab.com/omnibus/settings/configuration.html)
 - [Https setup](https://docs.gitlab.com/omnibus/settings/nginx.html#manually-configuring-https)
 
+---
+
+
 ### Screenshots
 
 #### Create new user
-<p align="center">
+<div align="center">
     <img width="900" height="600" src="pic1.png">
-</p>
-<br>
+</div>
 
 
 
-<p align="center">
+
+<div align="center">
     <img width="900" height="600" src="pic2.png">
-</p>
-<br>
+</div>
+
 
 
 
 #### Create new project
-<p align="center">
+<div align="center">
     <img width="900" height="600" src="pic3.png">
-</p>
-<br>
+</div>
 
 
-<p align="center">
+
+
+<div align="center">
     <img width="900" height="600" src="pic4.png">
-</p>
-<br>
+</div>
 
 
 
-<p align="center">
+
+<div align="center">
     <img width="900" height="600" src="pic5.png">
-</p>
-<br>
+</div>
 

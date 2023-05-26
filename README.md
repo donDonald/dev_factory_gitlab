@@ -127,6 +127,6 @@ $ docker volume rm dev_factory_gitlab_gitlab-etc dev_factory_gitlab_gitlab-log d
 
 
 <div align="center">
-    <img width="900" height="600" src="pic5.png">
+    <img width="900" height="600" src="images/pic5.png">
 </div>
 

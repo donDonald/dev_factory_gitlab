@@ -98,14 +98,14 @@ $ docker volume rm dev_factory_gitlab_gitlab-etc dev_factory_gitlab_gitlab-log d
 
 #### Create new user
 <div align="center">
-    <img width="900" height="600" src="pic1.png">
+    <img width="900" height="600" src="images/pic1.png">
 </div>
 
 
 
 
 <div align="center">
-    <img width="900" height="600" src="pic2.png">
+    <img width="900" height="600" src="images/pic2.png">
 </div>
 
 
@@ -113,14 +113,14 @@ $ docker volume rm dev_factory_gitlab_gitlab-etc dev_factory_gitlab_gitlab-log d
 
 #### Create new project
 <div align="center">
-    <img width="900" height="600" src="pic3.png">
+    <img width="900" height="600" src="images/pic3.png">
 </div>
 
 
 
 
 <div align="center">
-    <img width="900" height="600" src="pic4.png">
+    <img width="900" height="600" src="images/pic4.png">
 </div>
 
 
